@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -75,7 +76,7 @@ nav {
   color: white !important;
 }
 
-/* SECTION ACCUEIL */
+/*  SECTION ACCUEIL */
 #accueil {
   background: linear-gradient(135deg, #e4d7f5, #a37ddc);
   padding: 80px 0;
@@ -148,7 +149,7 @@ nav {
   object-fit: cover;
 }
 
-/* SECTION A PROPOS */
+/*  SECTION A PROPOS  */
 #apropos {
   background: #1d1d1d;
   color: #fff;
@@ -196,7 +197,7 @@ nav {
   color: #fff;
 }
 
-/* SECTION SERVICES */
+/*  SECTION SERVICES  */
 #services {
   background: #f8f8f8;
   padding: 70px 0;
@@ -224,7 +225,7 @@ nav {
   padding: 20px;
   flex: 1 1 220px;
   text-align: center;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .card:hover {
@@ -237,7 +238,7 @@ nav {
   color: #a37ddc;
 }
 
-/* SECTION PROJETS */
+/*  SECTION PROJETS  */
 #projets {
   background: linear-gradient(135deg, #e4d7f5, #a37ddc);
   padding: 70px 0;
@@ -288,7 +289,7 @@ nav {
   color: #fff;
 }
 
-/*  SECTION COMPÉTENCES  */
+/* SECTION COMPÉTENCES  */
 #competences {
   background: #fff;
   padding: 70px 0;
@@ -301,11 +302,9 @@ nav {
 }
 
 #competences .intro {
-  margin-bottom: 50px;
-  color: black;
   max-width: 700px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
+  color: black;
 }
 
 .competences-grid {
@@ -324,7 +323,6 @@ nav {
   column-gap: 15px;
 }
 
-
 .competence span {
   font-weight: 600;
   color: #222;
@@ -339,7 +337,6 @@ nav {
   border-radius: 4px;
   overflow: hidden;
   margin-top: 6px;
-
 }
 
 .bar {
@@ -355,9 +352,9 @@ nav {
   color: #222;
 }
 
-/* -------------------- SECTION CONTACT -------------------- */
+/* SECTION CONTACT  */
 #contact {
-  background: #e9dbf5; 
+  background: #e9dbf5;
   padding: 70px 0;
   color: #333;
 }
@@ -375,7 +372,7 @@ nav {
 
 .contact-info h2 {
   font-size: 2rem;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
   font-weight: 700;
   color: #111;
 }
@@ -423,12 +420,11 @@ nav {
   background: #5a037d;
 }
 
-/* Réseaux sociaux */
+/* RÉSEAUX SOCIAUX  */
 .social-links {
   margin-top: 20px;
   padding-top: 50px;
 }
-
 
 .social-links a {
   display: inline-flex;
@@ -437,7 +433,7 @@ nav {
   width: 35px;
   height: 35px;
   border: 1px solid #fff;
-  border-radius: 50%; 
+  border-radius: 50%;
   color: black;
   background-color: white;
   font-size: 20px;
@@ -446,7 +442,48 @@ nav {
 }
 
 .social-links a:hover {
-  background: #fff; 
-  color: #000; 
+  background: #fff;
+  color: #000;
 }
 
+/*  RESPONSIVE SUR PETIT ECRAN COMME LE TEL */
+@media (max-width: 768px) {
+  /* NAVIGATION */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  /* ACCUEIL */
+  .accueil-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .accueil-flex .image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* SERVICES */
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* COMPÉTENCES */
+  .competences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contact-flex {
+    flex-direction: column;
+  }
+}
